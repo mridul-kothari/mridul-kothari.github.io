@@ -1,17 +1,10 @@
-// Toggle navigation menu for mobile
+// Mobile nav toggle
 function toggleNav() {
   const nav = document.getElementById('nav');
-  if (nav.style.display === 'flex' || nav.style.display === 'block') {
-    nav.style.display = 'none';
-  } else {
-    nav.style.display = 'flex';
-  }
+  nav.style.display = (nav.style.display === 'flex') ? 'none' : 'flex';
 }
 
-// Update year in footer automatically
+// Set current year in footer
 document.addEventListener("DOMContentLoaded", () => {
-  const yearSpan = document.getElementById("year");
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
+  document.getElementById("year").textContent = new Date().getFullYear();
 });
